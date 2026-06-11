@@ -1,0 +1,634 @@
+:root {
+  --bg: #fffaf8;
+  --bg-soft: #fff0ec;
+  --panel: rgba(255, 255, 255, 0.94);
+  --panel-strong: #ffffff;
+  --gold: #c7192e;
+  --gold-light: #e93145;
+  --gold-dark: #8d0f20;
+  --text: #241113;
+  --muted: #77595d;
+  --line: rgba(199, 25, 46, 0.26);
+  --white-line: rgba(199, 25, 46, 0.11);
+  --shadow: 0 24px 70px rgba(120, 18, 31, 0.18);
+  --container: min(1120px, calc(100vw - 40px));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  line-height: 1.85;
+  letter-spacing: 0;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.skip-link,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus {
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  width: auto;
+  height: auto;
+  clip: auto;
+  padding: 10px 14px;
+  color: #111;
+  background: var(--gold-light);
+}
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 250, 248, 0.82);
+  backdrop-filter: blur(18px);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(201, 164, 83, 0.25);
+}
+
+.header-inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand img {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+}
+
+.menu-button {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+}
+
+.menu-button span:not(.sr-only) {
+  width: 20px;
+  height: 1px;
+  background: var(--gold-light);
+}
+
+.site-nav {
+  position: fixed;
+  inset: 72px 0 auto;
+  display: grid;
+  gap: 0;
+  padding: 10px 20px 18px;
+  transform: translateY(-14px);
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid var(--line);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.site-nav.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.site-nav a {
+  padding: 12px 0;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.site-nav a:hover,
+.site-nav a.is-active {
+  color: var(--gold-light);
+}
+
+.hero {
+  min-height: 92svh;
+  position: relative;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  padding: 114px 0 54px;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 248, 0.96) 0%, rgba(255, 248, 246, 0.86) 43%, rgba(255, 248, 246, 0.18) 100%),
+    linear-gradient(0deg, #fffaf8 0%, rgba(255, 250, 248, 0.22) 30%, rgba(255, 250, 248, 0.04) 100%),
+    radial-gradient(circle at 18% 28%, rgba(199, 25, 46, 0.16), transparent 36%);
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.02);
+}
+
+.hero-content {
+  display: grid;
+  gap: 22px;
+  max-width: var(--container);
+}
+
+.hero-logo img {
+  width: clamp(132px, 34vw, 230px);
+  height: auto;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.58));
+}
+
+h1,
+h2,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  max-width: 760px;
+  color: var(--text);
+  font-size: clamp(34px, 10.6vw, 82px);
+  line-height: 1.08;
+  font-weight: 600;
+  text-shadow: 0 12px 34px rgba(255, 255, 255, 0.7);
+}
+
+.hero-lead {
+  max-width: 650px;
+  color: #503236;
+  font-size: clamp(15px, 4vw, 18px);
+}
+
+.hero-prices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 560px;
+}
+
+.hero-prices p,
+.system-row,
+.shop-info,
+.recruit-panel {
+  border: 1px solid var(--line);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.96), rgba(255, 242, 239, 0.9));
+  box-shadow: var(--shadow);
+}
+
+.hero-prices p {
+  min-height: 104px;
+  display: grid;
+  align-content: center;
+  gap: 2px;
+  padding: 16px;
+}
+
+.hero-prices span {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-prices strong {
+  color: var(--gold-light);
+  font-size: clamp(24px, 7vw, 42px);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.hero-actions,
+.access-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border: 1px solid var(--line);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold-light);
+}
+
+.button-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold) 48%, var(--gold-dark));
+}
+
+.button-secondary {
+  color: var(--gold-dark);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.section {
+  padding: 72px 0;
+  background:
+    linear-gradient(180deg, rgba(199, 25, 46, 0.04), transparent 25%),
+    var(--bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-heading {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.section-label {
+  color: var(--gold);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h2 {
+  max-width: 840px;
+  font-size: clamp(28px, 7vw, 52px);
+  line-height: 1.18;
+  font-weight: 500;
+}
+
+.concept-layout {
+  display: grid;
+  gap: 18px;
+  color: #503236;
+  font-size: 16px;
+}
+
+.system-section {
+  background:
+    linear-gradient(135deg, rgba(199, 25, 46, 0.08), rgba(255, 255, 255, 0.76)),
+    var(--bg-soft);
+}
+
+.system-list {
+  display: grid;
+  gap: 10px;
+}
+
+.system-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 16px;
+}
+
+.system-row span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.system-row strong {
+  color: var(--gold-light);
+  font-size: clamp(20px, 6vw, 34px);
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: right;
+}
+
+.note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 12px;
+}
+
+.interior-photo {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: #050505;
+  box-shadow: var(--shadow);
+}
+
+.interior-photo img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.access-layout {
+  display: grid;
+  gap: 18px;
+}
+
+.shop-info {
+  padding: 22px;
+}
+
+.shop-info dl {
+  display: grid;
+  gap: 0;
+  margin: 0 0 22px;
+}
+
+.shop-info dl div {
+  display: grid;
+  gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.shop-info dt {
+  color: var(--gold);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.shop-info dd {
+  margin: 0;
+  color: #efe4cd;
+  font-size: 16px;
+}
+
+.map-frame {
+  min-height: 340px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--panel-strong);
+  box-shadow: var(--shadow);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  display: block;
+  border: 0;
+  filter: grayscale(0.85) contrast(1.06);
+}
+
+.recruit-section {
+  background:
+    linear-gradient(rgba(255, 250, 248, 0.9), rgba(255, 250, 248, 0.9)),
+    url("../images/store.jpg") center / cover fixed;
+}
+
+.recruit-panel {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+}
+
+.recruit-panel p {
+  color: #503236;
+}
+
+.site-footer {
+  padding: 42px 0 90px;
+  color: var(--muted);
+  background: #fff;
+  border-top: 1px solid rgba(199, 25, 46, 0.12);
+  text-align: center;
+}
+
+.footer-inner {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.footer-brand img {
+  width: 96px;
+  height: auto;
+}
+
+.site-footer small {
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 12px;
+}
+
+.fixed-cta {
+  position: fixed;
+  z-index: 60;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.fixed-cta a {
+  min-height: 52px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: #15110a;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.fixed-cta a:last-child {
+  color: var(--gold-dark);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+body.nav-open .fixed-cta {
+  display: none;
+}
+
+@media (max-width: 759px) {
+  .hero {
+    min-height: 86svh;
+  }
+
+  .hero-actions {
+    display: none;
+  }
+}
+
+@media (min-width: 760px) {
+  .menu-button {
+    display: none;
+  }
+
+  .site-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 0;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    background: transparent;
+    border: 0;
+  }
+
+  .site-nav a {
+    border: 0;
+  }
+
+  .hero {
+    min-height: 92vh;
+    align-items: center;
+    padding: 92px 0 40px;
+  }
+
+  .hero-content {
+    gap: 16px;
+  }
+
+  .hero-logo img {
+    width: min(14vw, 150px);
+  }
+
+  h1 {
+    font-size: clamp(42px, 5.4vw, 60px);
+  }
+
+  .hero-lead {
+    max-width: 620px;
+    font-size: 16px;
+  }
+
+  .hero-prices p {
+    min-height: 88px;
+  }
+
+  .hero-prices {
+    grid-template-columns: repeat(2, 230px);
+  }
+
+  .concept-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+    font-size: 17px;
+  }
+
+  .system-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .access-layout {
+    grid-template-columns: 0.86fr 1.14fr;
+    align-items: stretch;
+  }
+
+  .shop-info {
+    padding: 28px;
+  }
+
+  .recruit-panel {
+    max-width: 760px;
+    padding: 42px;
+  }
+
+  .site-footer {
+    padding-bottom: 44px;
+  }
+
+  .fixed-cta {
+    display: none;
+  }
+}
+
+@media (min-width: 1040px) {
+  .section {
+    padding: 104px 0;
+  }
+
+  .header-inner {
+    min-height: 84px;
+  }
+
+  .brand img {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
