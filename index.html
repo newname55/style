@@ -23,12 +23,13 @@
   <meta property="og:title" content="岡山・柳町のセクキャバ STYLE（スタイル）公式サイト">
   <meta property="og:description" content="岡山市北区柳町1-9-8 柳町65ビル2F。営業時間19:00〜LAST、セット料金5,000円、指名料1,000円。">
   <meta property="og:url" content="https://okayama-style.com/">
-  <meta property="og:image" content="https://okayama-style.com/assets/images/store.jpg">
+  <meta property="og:image" content="https://okayama-style.com/assets/images/style_shop_hero_pc_1920x1080.jpg">
   <meta property="og:image:alt" content="STYLE（スタイル）の店内写真">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preload" as="image" href="assets/images/logo.png">
-  <link rel="preload" as="image" href="assets/images/store.jpg">
+  <link rel="preload" as="image" href="assets/images/style_shop_hero_pc_1920x1080.jpg" media="(min-width: 760px)">
+  <link rel="preload" as="image" href="assets/images/style_shop_hero_sp_1080x1440.jpg" media="(max-width: 759px)">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script type="application/ld+json">
@@ -39,7 +40,7 @@
     "name": "STYLE（スタイル）",
     "alternateName": "岡山 STYLE",
     "url": "https://okayama-style.com/",
-    "image": "https://okayama-style.com/assets/images/store.jpg",
+    "image": "https://okayama-style.com/assets/images/style_shop_hero_pc_1920x1080.jpg",
     "logo": "https://okayama-style.com/assets/images/logo.png",
     "telephone": "+81-86-226-6766",
     "priceRange": "セット料金 5,000円 / 指名料 1,000円",
@@ -102,13 +103,20 @@
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-media" aria-hidden="true">
-        <img src="assets/images/store.jpg" alt="">
+        <picture>
+          <source media="(max-width: 759px)" srcset="assets/images/style_shop_hero_sp_1080x1440.jpg">
+          <img src="assets/images/style_shop_hero_pc_1920x1080.jpg" alt="">
+        </picture>
       </div>
       <div class="container hero-content">
         <div class="hero-logo">
           <img src="assets/images/logo.png" alt="STYLE" width="260" height="260">
         </div>
-        <h1 id="hero-title">岡山・柳町のセクキャバ STYLE</h1>
+        <h1 id="hero-title">
+          <span class="hero-title-line">岡山・柳町の</span>
+          <span class="hero-title-line">セクキャバ</span>
+          <span class="hero-title-line hero-title-line--style">STYLE</span>
+        </h1>
         <div class="hero-prices" aria-label="主要料金">
           <p><span>SET</span><strong>5,000円</strong></p>
           <p><span>指名料</span><strong>1,000円</strong></p>
