@@ -648,10 +648,10 @@ body.nav-open .fixed-cta {
   }
 
   .hero-media img {
-    object-position: center 76%;
+    object-position: center 42%;
     filter: saturate(1.25) contrast(1.06) brightness(0.98);
     transform: scale(1.1);
-    transform-origin: center 76%;
+    transform-origin: center 42%;
   }
 }
 
