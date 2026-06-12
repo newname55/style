@@ -24,3 +24,23 @@ https://okayama-style.com/
 - `assets/images/`
 - `sitemap.xml`
 - `robots.txt`
+
+## 運用情報
+- ドメイン: https://okayama-style.com/
+- GitHub: https://github.com/newname55/style.git
+- 本番公開先: Xserver `/home/kubokuboben/okayama-style.com/public_html/`
+- SSH Host:
+  - `style-site`: 本番 public_html 直行用
+  - `style-deploy`: rsync デプロイ用
+
+## デプロイ方法
+ローカルの変更を本番に反映するには、リポジトリルートで以下を実行する。
+
+```bash
+bash scripts/deploy.sh
+```
+
+- 実行すると `Type STYLE to continue:` と確認を求められるので、`STYLE` と入力すると rsync で本番に反映される
+- `rsync -avz --delete` を使用するため、ローカルに存在しないファイルは本番から削除される
+- `.git` / `.DS_Store` / `scripts` / `.env` は転送対象外
+- 本番 public_html を直接編集しない。変更は必ず git にコミットしてから deploy.sh で反映する
