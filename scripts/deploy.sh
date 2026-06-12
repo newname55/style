@@ -1,7 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# リポジトリルートから実行することを保証する
 cd "$(dirname "$0")/.."
 
 REMOTE="style-deploy:/home/kubokuboben/okayama-style.com/public_html/"
@@ -17,9 +16,15 @@ fi
 
 rsync -avz --delete \
   --exclude ".git/" \
+  --exclude ".claude/" \
+  --exclude "CLAUDE.md" \
+  --exclude "README.md" \
+  --exclude ".gitignore" \
   --exclude ".DS_Store" \
   --exclude "scripts/" \
   --exclude ".env" \
+  --exclude ".htaccess" \
+  --exclude ".user.ini" \
   ./ "$REMOTE"
 
 echo "STYLE deploy done."
