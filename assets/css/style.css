@@ -651,10 +651,10 @@ body.nav-open .fixed-cta {
   }
 
   .hero-media img {
-    object-position: 44% 42%;
+    object-position: 44% 31%;
     filter: saturate(1.25) contrast(1.06) brightness(0.98);
     transform: scale(1.1);
-    transform-origin: center 42%;
+    transform-origin: 44% 31%;
   }
 
   .interior-photo {
