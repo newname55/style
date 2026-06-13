@@ -729,6 +729,23 @@ body.nav-open .fixed-cta {
     grid-template-columns: repeat(2, 230px);
   }
 
+  .interior-section .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .interior-photo {
+    max-width: 960px;
+    height: 380px;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+
+  .interior-photo img {
+    height: 100%;
+    aspect-ratio: auto;
+    object-position: center 44%;
+  }
+
   .concept-layout {
     grid-template-columns: 1fr 1fr;
     gap: 34px;
