@@ -507,7 +507,7 @@ h2 {
 .recruit-section {
   background:
     linear-gradient(rgba(32, 4, 10, 0.86), rgba(32, 4, 10, 0.92)),
-    url("../images/store.jpg") center / cover fixed;
+    url("../images/store.webp") center / cover fixed;
 }
 
 .recruit-panel {
