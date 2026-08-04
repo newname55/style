@@ -646,6 +646,146 @@ h2 {
   font-size: 12px;
 }
 
+.recruit-page {
+  background:
+    linear-gradient(rgba(22, 4, 7, 0.9), rgba(22, 4, 7, 0.96)),
+    url("../images/store.webp") center / cover fixed;
+}
+
+.recruit-page-main {
+  padding: 112px 0 48px;
+}
+
+.recruit-page-hero {
+  display: grid;
+  gap: 18px;
+  max-width: 820px;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.recruit-page-hero h1 {
+  max-width: 720px;
+}
+
+.recruit-page-hero p {
+  max-width: 60ch;
+  color: #ffe1dc;
+  font-size: 16px;
+}
+
+.recruit-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.recruit-detail-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.recruit-detail-panel {
+  padding: 26px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: rgba(255, 248, 244, 0.96);
+  color: var(--ink);
+}
+
+.recruit-detail-panel--dark {
+  color: var(--text);
+  background: linear-gradient(150deg, rgba(52, 5, 14, 0.96), rgba(16, 2, 5, 0.94));
+}
+
+.recruit-detail-panel h2 {
+  margin-bottom: 18px;
+  font-size: clamp(24px, 5vw, 34px);
+}
+
+.recruit-detail-panel--dark h2,
+.recruit-detail-panel--dark p,
+.recruit-detail-panel--dark li {
+  color: #fff0eb;
+}
+
+.recruit-detail-panel p,
+.recruit-detail-panel li {
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+}
+
+.recruit-detail-panel p {
+  line-height: 1.9;
+}
+
+.recruit-detail-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.recruit-detail-list li {
+  position: relative;
+  padding: 14px 16px 14px 38px;
+  border-left: 3px solid var(--gold);
+  background: rgba(255, 45, 70, 0.08);
+  line-height: 1.7;
+}
+
+.recruit-detail-list li::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 16px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold-light);
+}
+
+.recruit-page-note {
+  margin-top: 18px;
+  color: #6d1520;
+  font-size: 12px;
+}
+
+.recruit-contact {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid rgba(255, 211, 90, 0.35);
+  background: rgba(255, 45, 70, 0.1);
+}
+
+.recruit-contact strong {
+  color: var(--gold-dark);
+  font-size: 20px;
+}
+
+.recruit-contact a {
+  color: var(--gold-dark);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.recruit-contact .recruit-line-link {
+  width: fit-content;
+  padding: 10px 14px;
+  color: #fff;
+  background: #06c755;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.recruit-page-footer {
+  margin-top: 18px;
+}
+
 .recruit-panel p {
   color: #ffe1dc;
 }
@@ -787,6 +927,22 @@ body.nav-open .fixed-cta {
     background-attachment: scroll;
   }
 
+  .recruit-page {
+    background-attachment: scroll;
+  }
+
+  .recruit-page-main {
+    padding-top: 88px;
+  }
+
+  .recruit-page-hero h1 {
+    font-size: clamp(30px, 8.5vw, 42px);
+  }
+
+  .recruit-detail-panel {
+    padding: 22px;
+  }
+
   .interior-photo {
     max-width: 330px;
     margin-inline: auto;
@@ -898,6 +1054,15 @@ body.nav-open .fixed-cta {
   .recruit-layout {
     grid-template-columns: 1.12fr 0.88fr;
     align-items: stretch;
+  }
+
+  .recruit-detail-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+  }
+
+  .recruit-detail-panel {
+    padding: 34px;
   }
 
   .recruit-copy,
