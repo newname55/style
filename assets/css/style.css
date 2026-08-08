@@ -724,6 +724,26 @@ h2 {
   margin-top: 4px;
 }
 
+.recruit-visual-link {
+  display: block;
+  margin-bottom: 32px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recruit-visual-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 32px 90px rgba(120, 0, 20, 0.48);
+}
+
+.recruit-visual {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .recruit-detail-grid {
   display: grid;
   gap: 18px;
