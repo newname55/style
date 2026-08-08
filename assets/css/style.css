@@ -623,6 +623,16 @@ body.nav-open .fixed-cta {
   .yorucom-sp {
     display: inline-flex;
   }
+
+  .yorucom-banner-link {
+    max-height: 160px;
+  }
+
+  .yorucom-banner-link img {
+    height: 160px;
+    object-fit: cover;
+    object-position: center center;
+  }
 }
 
 @media (min-width: 760px) {
