@@ -501,6 +501,26 @@ h2 {
   margin-bottom: 24px;
 }
 
+.yorucom-banner-link {
+  display: block;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.yorucom-banner-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 32px 90px rgba(120, 0, 20, 0.48);
+}
+
+.yorucom-banner-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .schedule-actions {
   display: flex;
   flex-wrap: wrap;
