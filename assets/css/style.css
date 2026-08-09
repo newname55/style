@@ -849,6 +849,47 @@ h2 {
   margin-top: 18px;
 }
 
+.recruit-bridge {
+  margin-bottom: 32px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  background: rgba(16, 2, 5, 0.6);
+}
+
+.recruit-bridge-label {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.recruit-bridge-text {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.recruit-bridge-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.recruit-bridge-line {
+  color: #fff;
+  background: #06c755;
+  border-color: #06c755;
+}
+
+.recruit-bridge-line:hover {
+  background: #05b04c;
+  border-color: #05b04c;
+}
+
 .recruit-panel p {
   color: #ffe1dc;
 }
