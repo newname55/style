@@ -14,6 +14,13 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
 <meta name="robots" content="noindex, nofollow">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#fff5f8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B4N6NQSVRD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B4N6NQSVRD');
+</script>
 <link rel="stylesheet" href="assets/css/lp.css?v=<?php echo $asset_ver; ?>">
 </head>
 <body>
