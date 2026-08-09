@@ -9,14 +9,21 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>セクキャバって、何するの？｜はじめてのセクキャバをやさしく解説</title>
-<meta name="description" content="「セクキャバって何するの？」ちょっと気になる、でもちょっと不安。はじめてのお仕事をやさしく解説します。未経験OK・体験入店OK・送迎あり・日払いOK。">
+<title>セクキャバって、何するの？｜STYLE（スタイル）求人 やさしく解説</title>
+<meta name="description" content="「セクキャバって何するの？」ちょっと気になる、でもちょっと不安。STYLE（スタイル）のお仕事をやさしく解説します。未経験OK・体験入店OK・送迎あり・日払いOK。">
 <meta name="robots" content="noindex, nofollow">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#fff5f8">
 <link rel="stylesheet" href="assets/css/lp.css?v=<?php echo $asset_ver; ?>">
 </head>
 <body>
+
+<header class="lp-header">
+  <a class="lp-header-logo" href="../recruit.html" aria-label="STYLE求人ページへ戻る">
+    <img src="../assets/images/logo.webp" alt="STYLE（スタイル）求人" width="72" height="72">
+  </a>
+  <p class="lp-header-label">STYLE 求人専用ページ</p>
+</header>
 
 <main id="main">
 
@@ -564,6 +571,16 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
   <!-- /09_line-cta -->
 
 </main>
+
+<footer class="lp-footer">
+  <p class="lp-footer-brand">STYLE（スタイル）求人専用ページ</p>
+  <p class="lp-footer-address">岡山市北区柳町1-9-8 柳町65ビル 2F</p>
+  <p class="lp-footer-hours">営業時間 19:00〜LAST / 日曜定休</p>
+  <div class="lp-footer-links">
+    <a href="../index.html">店舗サイトを見る</a>
+    <a href="../recruit.html">STYLE求人ページへ</a>
+  </div>
+</footer>
 
 </body>
 </html>
