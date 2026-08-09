@@ -1,9 +1,8 @@
 <?php
 // セクキャバ求人LP（開発中）
 // 現在は 01_hero 〜 09_line-cta のみ実装。10 以降は未実装。
-// 06_salaryの金額は正式未確定のためプレースホルダー（○,○○○円）表示。確定後に差し替えること。
-$asset_ver = '20260809-10';
-$line_url  = '#'; // TODO: LINE公式アカウントのURLに差し替え
+$asset_ver = '20260809-11';
+$line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント（@pdz2759q）
 ?>
 <!doctype html>
 <html lang="ja">
@@ -305,7 +304,6 @@ $line_url  = '#'; // TODO: LINE公式アカウントのURLに差し替え
 
   <!-- ============================================================
        06_salary
-       ※ 金額は正式未確定のためプレースホルダー（○,○○○円）表示。確定後に差し替えること。
        ※ 10 以降のセクションは未実装
        ============================================================ -->
   <section class="salary" aria-labelledby="salary-title">
@@ -326,11 +324,11 @@ $line_url  = '#'; // TODO: LINE公式アカウントのURLに差し替え
       <ul class="salary__grid" aria-label="給与条件">
         <li class="salary__card">
           <p class="salary__card-label">体験時給</p>
-          <p class="salary__card-value">○,○○○円</p>
+          <p class="salary__card-value">時給4,000円<br class="u-br-sp">以上可能</p>
         </li>
         <li class="salary__card">
           <p class="salary__card-label">通常時給</p>
-          <p class="salary__card-value">○,○○○円〜</p>
+          <p class="salary__card-value">時給4,000円<br class="u-br-sp">以上可能</p>
         </li>
         <li class="salary__card">
           <p class="salary__card-label">各種バック</p>
@@ -346,9 +344,9 @@ $line_url  = '#'; // TODO: LINE公式アカウントのURLに差し替え
       <div class="salary__example">
         <p class="salary__example-badge">たとえば5時間働いた場合</p>
         <div class="salary__example-rows">
-          <p class="salary__example-row">時給 ○,○○○円 × 5時間</p>
+          <p class="salary__example-row">時給 4,000円 × 5時間</p>
           <p class="salary__example-row">＋ 各種バック</p>
-          <p class="salary__example-row salary__example-row--total">＝ その日のお給料イメージ</p>
+          <p class="salary__example-row salary__example-row--total">＝ 日給25,000円以上可能</p>
         </div>
         <p class="salary__example-caption">詳しい金額は、LINEまたは体験前の説明で確認できます。</p>
       </div>
@@ -533,6 +531,33 @@ $line_url  = '#'; // TODO: LINE公式アカウントのURLに差し替え
 
       <!-- 7. 小さな注記 -->
       <p class="cta__footnote">気になることを先に聞いてから、体験するか決められます。</p>
+
+      <!-- 8. 問い合わせ情報・応募資格 -->
+      <div class="cta__contact">
+        <dl class="cta__contact-list">
+          <div class="cta__contact-row">
+            <dt class="cta__contact-label">採用担当</dt>
+            <dd class="cta__contact-value"><a class="cta__contact-link" href="tel:090-3372-2991">090-3372-2991</a></dd>
+          </div>
+          <div class="cta__contact-row">
+            <dt class="cta__contact-label">求人用LINE</dt>
+            <dd class="cta__contact-value">@pdz2759q</dd>
+          </div>
+          <div class="cta__contact-row">
+            <dt class="cta__contact-label">店舗電話</dt>
+            <dd class="cta__contact-value"><a class="cta__contact-link" href="tel:086-226-6766">086-226-6766</a></dd>
+          </div>
+          <div class="cta__contact-row">
+            <dt class="cta__contact-label">営業時間</dt>
+            <dd class="cta__contact-value">19:00〜LAST</dd>
+          </div>
+          <div class="cta__contact-row">
+            <dt class="cta__contact-label">定休日</dt>
+            <dd class="cta__contact-value">日曜日</dd>
+          </div>
+        </dl>
+        <p class="cta__contact-eligibility">応募資格：18歳以上 / 学生不可</p>
+      </div>
 
     </div>
   </section>

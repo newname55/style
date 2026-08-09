@@ -1618,6 +1618,62 @@ a { text-decoration: none; color: inherit; }
   color: var(--ink-muted);
 }
 
+/* ---------- 8. 問い合わせ情報・応募資格 ---------- */
+
+.cta__contact {
+  margin-top: 22px;
+  padding: 14px 16px;
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.cta__contact-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cta__contact-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.cta__contact-label {
+  flex: none;
+  width: 5.5em;
+  margin: 0;
+  color: var(--ink-muted);
+  font-weight: 700;
+}
+
+.cta__contact-value {
+  margin: 0;
+  color: var(--ink-strong);
+  font-weight: 700;
+}
+
+.cta__contact-link {
+  color: var(--ink-strong);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--pink-300);
+}
+
+.cta__contact-eligibility {
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--pink-100);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
 @media (min-width: 768px) {
   .cta__inner { width: min(430px, calc(100% - 48px)); }
 }
