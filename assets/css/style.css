@@ -1062,9 +1062,11 @@ body.nav-open .fixed-cta {
 @media (max-width: 759px) {
   .hero {
     align-items: start;
-    height: 62svh;
-    padding: 86px 0 18px;
+    height: auto;
+    min-height: 760px;
+    padding: 70px 0 40px;
   }
+
 
   .hero::before {
     background:
@@ -1075,6 +1077,7 @@ body.nav-open .fixed-cta {
 
   .hero-actions {
     display: none;
+    margin-top: 150px;
   }
 
   .hero-logo {
@@ -1111,7 +1114,7 @@ body.nav-open .fixed-cta {
 
   .hero-prices {
     gap: 8px;
-    width: min(100%, 220px);
+    width: min(100%, 150px);
     grid-template-columns: 1fr;
     margin-top: 12px;
   }
@@ -1147,7 +1150,7 @@ body.nav-open .fixed-cta {
   }
 
   .hero-media img {
-    object-position: 62% 44%;
+    object-position: 62% 25%;
     filter: saturate(1.12) contrast(1.02) brightness(1.03);
     transform: scale(1.06);
     transform-origin: 62% 56%;
@@ -1209,6 +1212,13 @@ body.nav-open .fixed-cta {
 
   .hero-actions--visit .button-primary {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-media img {
+    transform: scale(1.22);
+    transform-origin: 62% 36%;
   }
 }
 
