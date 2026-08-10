@@ -1208,6 +1208,7 @@ body.nav-open .fixed-cta {
   .hero-actions--visit {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
+    margin-top: 0;
   }
 
   .hero-actions--visit .button-primary {
