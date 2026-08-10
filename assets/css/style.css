@@ -1153,7 +1153,7 @@ body.nav-open .fixed-cta {
     object-position: 62% 25%;
     filter: saturate(1.12) contrast(1.02) brightness(1.03);
     transform: scale(1.06);
-    transform-origin: 62% 56%;
+    transform-origin: 82% 386%;
   }
 
   .recruit-section {
