@@ -89,7 +89,7 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
       <!-- 6. LINE CTA -->
       <div class="hero__cta">
         <p class="hero__cta-lead">まずは気軽に聞いてみてください<span class="u-heart" aria-hidden="true">♡</span></p>
-        <a class="btn-line" href="<?php echo htmlspecialchars($line_url, ENT_QUOTES, 'UTF-8'); ?>">
+        <a class="btn-line" href="<?php echo htmlspecialchars($line_url, ENT_QUOTES, 'UTF-8'); ?>" data-ga-event="recruit_line_click" data-ga-location="hero_line">
           <span class="btn-line__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 3C6.9 3 2.8 6.4 2.8 10.6c0 3.8 3.3 6.9 7.7 7.5.3.06.7.2.8.46.1.24.07.6.03.85l-.13.8c-.04.24-.19.93.81.51 1-.42 5.4-3.2 7.37-5.47 1.36-1.5 2.01-3 2.01-4.65C21.4 6.4 17.3 3 12 3Z"/></svg>
           </span>
@@ -534,7 +534,7 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
 
       <!-- 6. LINE CTA -->
       <div class="cta__button-wrap">
-        <a class="btn-line" href="<?php echo htmlspecialchars($line_url, ENT_QUOTES, 'UTF-8'); ?>">
+        <a class="btn-line" href="<?php echo htmlspecialchars($line_url, ENT_QUOTES, 'UTF-8'); ?>" data-ga-event="recruit_line_click" data-ga-location="final_line">
           <span class="btn-line__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 3C6.9 3 2.8 6.4 2.8 10.6c0 3.8 3.3 6.9 7.7 7.5.3.06.7.2.8.46.1.24.07.6.03.85l-.13.8c-.04.24-.19.93.81.51 1-.42 5.4-3.2 7.37-5.47 1.36-1.5 2.01-3 2.01-4.65C21.4 6.4 17.3 3 12 3Z"/></svg>
           </span>
@@ -588,6 +588,18 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
     <a href="../recruit.html">STYLE求人ページへ</a>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a[data-ga-event]');
+    if (!link || typeof gtag !== 'function') return;
+    gtag('event', link.dataset.gaEvent, {
+      page_type: 'recruit_dev',
+      link_location: link.dataset.gaLocation,
+      link_text: link.textContent.trim()
+    });
+  });
+</script>
 
 </body>
 </html>

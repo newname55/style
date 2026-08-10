@@ -68,7 +68,7 @@
           <p class="recruit-bridge-text">STYLEでの接客の流れ、お店のルール、初めての方が気になりやすいことを、やさしくまとめています。働くかどうかは、説明を聞いてから決められます。</p>
           <div class="recruit-bridge-actions">
             <a class="button button-primary" href="recruit-dev/index.php">セクキャバってどんなところ？</a>
-            <a class="button recruit-bridge-line" href="https://line.me/R/ti/p/%40pdz2759q" target="_blank" rel="noopener noreferrer">LINEで質問する</a>
+            <a class="button recruit-bridge-line" href="https://line.me/R/ti/p/%40pdz2759q" target="_blank" rel="noopener noreferrer" data-ga-event="recruit_line_click" data-ga-location="bridge_line">LINEで質問する</a>
           </div>
         </div>
       </header>
@@ -105,7 +105,7 @@
           <div class="recruit-contact">
             <strong>採用担当者へお問い合わせ</strong>
             <a href="tel:09033722991">090-3372-2991</a>
-            <a class="recruit-line-link" href="https://line.me/R/ti/p/%40pdz2759q" target="_blank" rel="noopener">求人用LINE：@pdz2759q</a>
+            <a class="recruit-line-link" href="https://line.me/R/ti/p/%40pdz2759q" target="_blank" rel="noopener" data-ga-event="recruit_line_click" data-ga-location="contact_line">求人用LINE：@pdz2759q</a>
             <small>店舗電話：086-226-6766 / 営業時間 19:00〜LAST / 定休日 日曜日</small>
           </div>
         </section>
@@ -126,6 +126,17 @@
     <a href="tel:0862266766">電話する</a>
     <a href="index.html">店舗サイト</a>
   </div>
+  <script>
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('a[data-ga-event]');
+      if (!link || typeof gtag !== 'function') return;
+      gtag('event', link.dataset.gaEvent, {
+        page_type: 'recruit',
+        link_location: link.dataset.gaLocation,
+        link_text: link.textContent.trim()
+      });
+    });
+  </script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
