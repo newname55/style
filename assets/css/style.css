@@ -228,12 +228,6 @@ a {
   max-width: var(--container);
 }
 
-.hero-logo img {
-  width: clamp(132px, 34vw, 230px);
-  height: auto;
-  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.58));
-}
-
 h1,
 h2,
 p {
@@ -297,6 +291,7 @@ h1 {
   background:
     linear-gradient(150deg, rgba(255, 248, 244, 0.96), rgba(255, 219, 216, 0.9)),
     linear-gradient(90deg, rgba(255, 45, 70, 0.12), transparent);
+  border-radius: 18px;
   box-shadow: var(--shadow);
 }
 
@@ -336,6 +331,7 @@ h1 {
   justify-content: center;
   padding: 12px 22px;
   border: 1px solid var(--line);
+  border-radius: 10px;
   font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -374,10 +370,24 @@ h1 {
   margin-bottom: 28px;
 }
 
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 180, 200, 0.65), transparent);
+  border-radius: 2px;
+}
+
 .section-label {
-  color: var(--accent);
+  display: inline-block;
+  padding: 4px 14px;
+  color: #ffc6d2;
+  background: rgba(255, 180, 200, 0.14);
+  border: 1px solid rgba(255, 150, 180, 0.3);
+  border-radius: 999px;
   font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -395,6 +405,13 @@ h2 {
   gap: 18px;
   color: #ffe1dc;
   font-size: 16px;
+}
+
+.concept-layout p {
+  padding: 18px 20px;
+  background: rgba(255, 235, 245, 0.06);
+  border: 1px solid rgba(255, 150, 180, 0.15);
+  border-radius: 16px;
 }
 
 .system-section {
@@ -415,7 +432,7 @@ h2 {
   justify-content: space-between;
   gap: 18px;
   padding: 18px 16px;
-  transform: skewX(-2deg);
+  border-radius: 18px;
 }
 
 .system-row span {
@@ -442,6 +459,8 @@ h2 {
   margin: 0;
   border: 1px solid var(--line);
   background: #120305;
+  border-radius: 20px;
+  overflow: hidden;
   box-shadow: var(--shadow);
 }
 
@@ -492,6 +511,7 @@ h2 {
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--panel-strong);
+  border-radius: 20px;
   box-shadow: var(--shadow);
 }
 
@@ -521,8 +541,9 @@ h2 {
   display: block;
   margin-bottom: 20px;
   border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -561,6 +582,7 @@ h2 {
 .recruit-copy,
 .recruit-card {
   border: 1px solid var(--line);
+  border-radius: 22px;
   box-shadow: var(--shadow);
 }
 
@@ -574,8 +596,10 @@ h2 {
     linear-gradient(90deg, rgba(255, 45, 70, 0.16), transparent);
 }
 
-.recruit-copy .section-label {
-  color: var(--accent);
+.recruit-card .section-label {
+  color: #9b3a5a;
+  background: rgba(180, 60, 90, 0.1);
+  border-color: rgba(180, 60, 90, 0.2);
 }
 
 .recruit-copy h2 {
@@ -586,6 +610,30 @@ h2 {
   max-width: 60ch;
   color: #ffe1dc;
   font-size: 16px;
+}
+
+.recruit-learning {
+  padding: 20px 22px;
+  background: rgba(255, 240, 248, 0.09);
+  border: 1px solid rgba(255, 150, 180, 0.3);
+  border-radius: 18px;
+}
+
+.recruit-learning-label {
+  margin-bottom: 8px;
+  color: #ffccd8;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.recruit-learning-text {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 .recruit-points {
@@ -968,10 +1016,6 @@ body.nav-open .fixed-cta {
     display: none;
   }
 
-  .hero-logo {
-    display: none;
-  }
-
   h1 {
     max-width: 100%;
     font-size: clamp(30px, 9.4vw, 39px);
@@ -1099,10 +1143,6 @@ body.nav-open .fixed-cta {
 
   .hero-content {
     gap: 16px;
-  }
-
-  .hero-logo img {
-    width: min(14vw, 150px);
   }
 
   h1 {
