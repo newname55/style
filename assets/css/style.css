@@ -1111,14 +1111,14 @@ body.nav-open .fixed-cta {
 
   .hero-prices {
     gap: 8px;
-    width: min(100%, 260px);
+    width: min(100%, 220px);
     grid-template-columns: 1fr;
-    margin-top: 16px;
+    margin-top: 12px;
   }
 
   .hero-prices p {
-    min-height: 64px;
-    padding: 12px 14px;
+    min-height: 58px;
+    padding: 10px 12px;
     background:
       linear-gradient(150deg, rgba(24, 3, 7, 0.72), rgba(80, 8, 18, 0.62)),
       linear-gradient(90deg, rgba(255, 45, 70, 0.12), transparent);
@@ -1136,18 +1136,18 @@ body.nav-open .fixed-cta {
 
   .hero-prices strong {
     color: #fff4ec;
-    font-size: clamp(24px, 7.2vw, 31px);
+    font-size: clamp(22px, 6.8vw, 28px);
     text-shadow: 0 0 18px rgba(255, 45, 70, 0.65);
   }
 
   .hero-price-note {
-    width: min(100%, 260px);
+    width: min(100%, 220px);
     font-size: 11px;
     line-height: 1.5;
   }
 
   .hero-media img {
-    object-position: 62% 56%;
+    object-position: 62% 44%;
     filter: saturate(1.12) contrast(1.02) brightness(1.03);
     transform: scale(1.06);
     transform-origin: 62% 56%;
