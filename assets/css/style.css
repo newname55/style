@@ -1219,7 +1219,7 @@ body.nav-open .fixed-cta {
 @media (max-width: 430px) {
   .hero-media img {
     transform: scale(1.22);
-    transform-origin: 62% 36%;
+    transform-origin: 62% 100%;
   }
 }
 
