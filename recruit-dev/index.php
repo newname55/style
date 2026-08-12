@@ -1,6 +1,5 @@
 <?php
-// セクキャバ求人LP（開発中）
-// 現在は 01_hero 〜 09_line-cta のみ実装。10 以降は未実装。
+// セクキャバ求人LP（01_hero〜09_line-ctaで完結）
 $asset_ver = '20260809-11';
 $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント（@pdz2759q）
 ?>
@@ -11,7 +10,7 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>セクキャバってどんなところ？｜STYLE（スタイル）求人 やさしく解説</title>
 <meta name="description" content="セクキャバが初めての方へ。STYLE（スタイル）のお店の雰囲気、働き方、接客の流れをやさしく解説します。仕事内容を聞くだけでも大丈夫です。">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#fff5f8">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4N6NQSVRD"></script>
