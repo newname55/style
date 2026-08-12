@@ -1,18 +1,18 @@
 :root {
-  --bg: #160407;
-  --bg-soft: #2a070e;
+  --bg: #1c0a12;
+  --bg-soft: #351522;
   --panel: rgba(255, 245, 242, 0.94);
   --panel-strong: #fff8f4;
-  --gold: #ff2d46;
-  --gold-light: #ff5a70;
-  --gold-dark: #a90018;
-  --accent: #ffd35a;
+  --gold: #e96d9c;
+  --gold-light: #f59ab9;
+  --gold-dark: #a8446e;
+  --accent: #f4cf88;
   --text: #fff4ec;
   --ink: #2a070d;
   --muted: #ffd0d6;
-  --line: rgba(255, 45, 70, 0.4);
+  --line: rgba(233, 109, 156, 0.44);
   --white-line: rgba(255, 255, 255, 0.16);
-  --shadow: 0 28px 80px rgba(120, 0, 20, 0.36);
+  --shadow: 0 24px 64px rgba(92, 14, 48, 0.24);
   --container: min(1120px, calc(100vw - 40px));
 }
 
@@ -28,10 +28,10 @@ body {
   margin: 0;
   color: var(--text);
   background:
-    radial-gradient(circle at 16% 0%, rgba(255, 45, 70, 0.32), transparent 34%),
-    radial-gradient(circle at 84% 14%, rgba(255, 211, 90, 0.12), transparent 28%),
-    linear-gradient(180deg, #120305 0%, #25060c 48%, #120305 100%);
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+    radial-gradient(circle at 16% 0%, rgba(245, 154, 185, 0.2), transparent 34%),
+    radial-gradient(circle at 84% 14%, rgba(255, 220, 160, 0.14), transparent 28%),
+    linear-gradient(180deg, #18070e 0%, #321322 48%, #18070e 100%);
+  font-family: "Hiragino Maru Gothic ProN", "ヒラギノ丸ゴ ProN", "Yu Gothic", "YuGothic", Meiryo, sans-serif;
   line-height: 1.85;
   letter-spacing: 0;
 }
@@ -85,13 +85,13 @@ a {
   inset: 0 0 auto;
   z-index: 50;
   border-bottom: 1px solid rgba(255, 45, 70, 0.24);
-  background: rgba(21, 3, 7, 0.84);
+  background: rgba(39, 11, 24, 0.84);
   backdrop-filter: blur(18px);
   transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .site-header.is-scrolled {
-  background: rgba(21, 3, 7, 0.96);
+  background: rgba(39, 11, 24, 0.96);
   border-color: rgba(255, 45, 70, 0.42);
 }
 
@@ -107,6 +107,7 @@ a {
   width: 74px;
   height: 74px;
   object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(232, 91, 145, 0.18));
 }
 
 .menu-button {
@@ -138,7 +139,7 @@ a {
   transform: translateY(-14px);
   opacity: 0;
   pointer-events: none;
-  background: rgba(21, 3, 7, 0.98);
+  background: rgba(39, 11, 24, 0.98);
   border-bottom: 1px solid var(--line);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -179,9 +180,9 @@ a {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(20, 2, 6, 0.92) 0%, rgba(32, 4, 10, 0.7) 44%, rgba(110, 5, 22, 0.12) 100%),
-    linear-gradient(0deg, #160407 0%, rgba(22, 4, 7, 0.34) 28%, rgba(22, 4, 7, 0.02) 72%),
-    radial-gradient(circle at 20% 28%, rgba(255, 45, 70, 0.46), transparent 34%),
+    linear-gradient(90deg, rgba(34, 8, 20, 0.76) 0%, rgba(58, 14, 34, 0.46) 44%, rgba(135, 35, 72, 0.08) 100%),
+    linear-gradient(0deg, #1c0a12 0%, rgba(35, 8, 19, 0.24) 28%, rgba(35, 8, 19, 0.01) 72%),
+    radial-gradient(circle at 20% 28%, rgba(245, 125, 169, 0.3), transparent 34%),
     repeating-linear-gradient(100deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 18px);
 }
 
@@ -193,7 +194,7 @@ a {
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 55%,
-    rgba(0, 0, 0, 0.85) 100%
+    rgba(24, 5, 14, 0.66) 100%
   );
   pointer-events: none;
 }
@@ -217,7 +218,7 @@ a {
 .hero-media img {
   object-fit: cover;
   object-position: center 58%;
-  filter: saturate(1.34) contrast(1.12) brightness(0.86);
+  filter: saturate(1.18) contrast(1.06) brightness(0.98);
   transform: scale(1.06);
   transform-origin: center 62%;
 }
@@ -229,7 +230,7 @@ a {
 }
 
 .hero-logo img {
-  width: clamp(132px, 34vw, 230px);
+  width: clamp(100px, 23vw, 132px);
   height: auto;
   filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.58));
 }
@@ -245,14 +246,22 @@ h1 {
   color: var(--text);
   font-size: clamp(34px, 10.6vw, 82px);
   line-height: 1.08;
-  font-weight: 600;
+  font-weight: 700;
   text-shadow:
     0 0 16px rgba(255, 45, 70, 0.75),
     0 14px 44px rgba(0, 0, 0, 0.82);
 }
 
 .hero-title-line {
-  display: inline;
+  display: block;
+}
+
+.hero-title-line--message {
+  margin-top: 8px;
+  color: #ffdbe7;
+  font-size: 0.62em;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
 }
 
 .hero-lead {
@@ -298,6 +307,7 @@ h1 {
     linear-gradient(150deg, rgba(255, 248, 244, 0.96), rgba(255, 219, 216, 0.9)),
     linear-gradient(90deg, rgba(255, 45, 70, 0.12), transparent);
   box-shadow: var(--shadow);
+  border-radius: 18px;
 }
 
 .hero-prices p {
@@ -322,6 +332,20 @@ h1 {
   font-weight: 500;
 }
 
+.hero-prices small {
+  color: #6d1520;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hero-price-note {
+  color: #ffe1dc;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .hero-actions,
 .access-buttons {
   display: flex;
@@ -342,6 +366,7 @@ h1 {
   letter-spacing: 0.04em;
   box-shadow: 0 0 22px rgba(255, 45, 70, 0.2);
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  border-radius: 999px;
 }
 
 .button:hover {
@@ -359,10 +384,17 @@ h1 {
   background: rgba(30, 4, 8, 0.74);
 }
 
+.button-quiet {
+  color: #ffe1ec;
+  background: rgba(90, 25, 54, 0.44);
+  border-color: rgba(245, 154, 185, 0.28);
+  box-shadow: none;
+}
+
 .section {
-  padding: 72px 0;
+  padding: 84px 0;
   background:
-    radial-gradient(circle at 18% 0%, rgba(255, 45, 70, 0.24), transparent 28%),
+    radial-gradient(circle at 18% 0%, rgba(245, 154, 185, 0.16), transparent 28%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 25%),
     var(--bg);
   border-top: 1px solid rgba(255, 45, 70, 0.24);
@@ -372,6 +404,15 @@ h1 {
   display: grid;
   gap: 10px;
   margin-bottom: 28px;
+}
+
+.section-heading::after {
+  content: "";
+  width: 54px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold-light), var(--accent));
+  box-shadow: 0 0 18px rgba(245, 154, 185, 0.28);
 }
 
 .section-label {
@@ -397,10 +438,46 @@ h2 {
   font-size: 16px;
 }
 
+.concept-layout p {
+  padding: 20px 22px;
+  border: 1px solid rgba(233, 109, 156, 0.24);
+  border-radius: 22px;
+  background: rgba(255, 245, 242, 0.06);
+}
+
+.event-section {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(245, 154, 185, 0.2), transparent 30%),
+    linear-gradient(135deg, rgba(53, 21, 34, 0.96), rgba(28, 10, 18, 0.98));
+}
+
+.event-lead {
+  max-width: 600px;
+  margin: -8px auto 24px;
+  color: #ffe1ec;
+  font-size: 16px;
+  text-align: center;
+}
+
+.event-card {
+  width: min(100%, 520px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(245, 154, 185, 0.5);
+  border-radius: 24px;
+  background: #160407;
+  box-shadow: 0 24px 64px rgba(92, 14, 48, 0.3);
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+}
+
 .system-section {
   background:
-    radial-gradient(circle at 80% 10%, rgba(255, 211, 90, 0.14), transparent 28%),
-    linear-gradient(135deg, rgba(255, 45, 70, 0.22), rgba(32, 4, 10, 0.84)),
+    radial-gradient(circle at 80% 10%, rgba(255, 220, 160, 0.16), transparent 28%),
+    linear-gradient(135deg, rgba(233, 109, 156, 0.18), rgba(53, 21, 34, 0.86)),
     var(--bg-soft);
 }
 
@@ -416,6 +493,12 @@ h2 {
   gap: 18px;
   padding: 18px 16px;
   transform: skewX(-2deg);
+}
+
+.system-row:nth-child(3) {
+  background:
+    linear-gradient(150deg, rgba(255, 245, 242, 0.9), rgba(255, 224, 230, 0.86)),
+    linear-gradient(90deg, rgba(233, 109, 156, 0.1), transparent);
 }
 
 .system-row span {
@@ -443,6 +526,8 @@ h2 {
   border: 1px solid var(--line);
   background: #120305;
   box-shadow: var(--shadow);
+  border-radius: 22px;
+  overflow: hidden;
 }
 
 .interior-photo img {
@@ -506,8 +591,8 @@ h2 {
 
 .schedule-section {
   background:
-    radial-gradient(circle at 80% 10%, rgba(255, 211, 90, 0.1), transparent 28%),
-    linear-gradient(225deg, rgba(255, 45, 70, 0.18), rgba(22, 4, 7, 0.88)),
+    radial-gradient(circle at 80% 10%, rgba(255, 220, 160, 0.12), transparent 28%),
+    linear-gradient(225deg, rgba(233, 109, 156, 0.15), rgba(53, 21, 34, 0.88)),
     var(--bg-soft);
 }
 
@@ -519,10 +604,13 @@ h2 {
 
 .yorucom-banner-link {
   display: block;
-  margin-bottom: 20px;
+  width: min(100%, 300px);
+  margin: 20px auto 0;
   border: 1px solid var(--line);
+  border-radius: 16px;
   box-shadow: var(--shadow);
   overflow: hidden;
+  opacity: 0.86;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -539,8 +627,20 @@ h2 {
 
 .schedule-actions {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+  margin-bottom: 6px;
+}
+
+.schedule-actions .button {
+  min-width: min(100%, 360px);
+  min-height: 60px;
+  font-size: 18px;
+}
+
+.schedule-section .section-heading {
+  margin-bottom: 22px;
 }
 
 .yorucom-sp {
@@ -549,7 +649,7 @@ h2 {
 
 .recruit-section {
   background:
-    linear-gradient(rgba(32, 4, 10, 0.86), rgba(32, 4, 10, 0.92)),
+    linear-gradient(rgba(53, 21, 34, 0.8), rgba(30, 8, 19, 0.9)),
     url("../images/store.webp") center / cover fixed;
 }
 
@@ -562,6 +662,7 @@ h2 {
 .recruit-card {
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  border-radius: 22px;
 }
 
 .recruit-copy {
@@ -570,8 +671,8 @@ h2 {
   padding: 26px;
   color: var(--text);
   background:
-    linear-gradient(150deg, rgba(52, 5, 14, 0.94), rgba(16, 2, 5, 0.9)),
-    linear-gradient(90deg, rgba(255, 45, 70, 0.16), transparent);
+    linear-gradient(150deg, rgba(79, 28, 53, 0.9), rgba(30, 8, 19, 0.88)),
+    linear-gradient(90deg, rgba(245, 154, 185, 0.16), transparent);
 }
 
 .recruit-copy .section-label {
@@ -586,6 +687,34 @@ h2 {
   max-width: 60ch;
   color: #ffe1dc;
   font-size: 16px;
+}
+
+.recruit-learning {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid rgba(242, 197, 106, 0.38);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(232, 91, 145, 0.2), rgba(26, 3, 8, 0.56));
+}
+
+.recruit-learning-label {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.recruit-learning-text {
+  color: #ffe1dc;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.recruit-learning .button {
+  width: fit-content;
+  margin-top: 4px;
 }
 
 .recruit-points {
@@ -853,7 +982,16 @@ h2 {
   margin-bottom: 32px;
   padding: 20px 24px;
   border: 1px solid var(--line);
+  border-radius: 22px;
   background: rgba(16, 2, 5, 0.6);
+}
+
+.recruit-bridge--featured {
+  width: min(100%, 720px);
+  margin: 4px 0 0;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(232, 91, 145, 0.2), rgba(16, 2, 5, 0.72));
+  box-shadow: 0 18px 44px rgba(120, 0, 48, 0.24);
 }
 
 .recruit-bridge-label {
@@ -952,20 +1090,23 @@ body.nav-open .fixed-cta {
 
 @media (max-width: 759px) {
   .hero {
-    align-items: center;
-    height: 62svh;
-    padding: 86px 0 18px;
+    align-items: start;
+    height: auto;
+    min-height: 760px;
+    padding: 70px 0 40px;
   }
+
 
   .hero::before {
     background:
-      linear-gradient(90deg, rgba(20, 2, 6, 0.62) 0%, rgba(32, 4, 10, 0.38) 52%, rgba(110, 5, 22, 0.08) 100%),
-      linear-gradient(0deg, #160407 0%, rgba(22, 4, 7, 0.12) 38%, rgba(22, 4, 7, 0) 72%),
-      radial-gradient(circle at 22% 64%, rgba(255, 45, 70, 0.28), transparent 34%);
+      linear-gradient(90deg, rgba(34, 8, 20, 0.48) 0%, rgba(58, 14, 34, 0.22) 52%, rgba(135, 35, 72, 0.04) 100%),
+      linear-gradient(0deg, #1c0a12 0%, rgba(35, 8, 19, 0.08) 38%, rgba(35, 8, 19, 0) 72%),
+      radial-gradient(circle at 22% 64%, rgba(245, 125, 169, 0.2), transparent 34%);
   }
 
   .hero-actions {
     display: none;
+    margin-top: 150px;
   }
 
   .hero-logo {
@@ -983,12 +1124,16 @@ body.nav-open .fixed-cta {
     white-space: nowrap;
   }
 
-  .hero-title-line--style {
-    letter-spacing: 0;
+  .hero-title-line--message {
+    white-space: normal;
+    font-size: 0.58em;
+    letter-spacing: 0.02em;
   }
 
   .hero-content {
     gap: 10px;
+    align-content: start;
+    padding-top: 18px;
   }
 
   .night-tags,
@@ -998,12 +1143,14 @@ body.nav-open .fixed-cta {
 
   .hero-prices {
     gap: 8px;
-    margin-top: clamp(76px, 10.5svh, 104px);
+    width: min(100%, 150px);
+    grid-template-columns: 1fr;
+    margin-top: 12px;
   }
 
   .hero-prices p {
-    min-height: 78px;
-    padding: 12px 14px;
+    min-height: 58px;
+    padding: 10px 12px;
     background:
       linear-gradient(150deg, rgba(24, 3, 7, 0.72), rgba(80, 8, 18, 0.62)),
       linear-gradient(90deg, rgba(255, 45, 70, 0.12), transparent);
@@ -1014,17 +1161,28 @@ body.nav-open .fixed-cta {
     color: #ffd0d6;
   }
 
+  .hero-prices small {
+    color: #ffd0d6;
+    font-size: 10px;
+  }
+
   .hero-prices strong {
     color: #fff4ec;
-    font-size: clamp(27px, 8.2vw, 36px);
+    font-size: clamp(22px, 6.8vw, 28px);
     text-shadow: 0 0 18px rgba(255, 45, 70, 0.65);
   }
 
+  .hero-price-note {
+    width: min(100%, 220px);
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
   .hero-media img {
-    object-position: 44% 31%;
-    filter: saturate(1.25) contrast(1.06) brightness(0.98);
-    transform: scale(1.1);
-    transform-origin: 44% 31%;
+    object-position: 62% 25%;
+    filter: saturate(1.12) contrast(1.02) brightness(1.03);
+    transform: scale(1.06);
+    transform-origin: 82% 386%;
   }
 
   .recruit-section {
@@ -1054,6 +1212,11 @@ body.nav-open .fixed-cta {
     overflow: hidden;
   }
 
+  .event-card {
+    width: min(100%, 330px);
+    border-radius: 20px;
+  }
+
   .interior-photo img {
     height: 100%;
     aspect-ratio: auto;
@@ -1065,7 +1228,34 @@ body.nav-open .fixed-cta {
   }
 
   .yorucom-sp {
-    display: inline-flex;
+    display: block;
+  }
+
+  .yorucom-banner-link {
+    width: min(100%, 240px);
+  }
+
+  .schedule-actions .button {
+    width: 100%;
+  }
+
+  .hero-actions--visit {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    /* 人物の腰付近まで下げる。これ以上下げると固定CTA(下端62px)に隠れる */
+    margin-top: 40px;
+  }
+
+  .hero-actions--visit .button-primary {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-media img {
+    /* 下端を基準(100%)に拡大することで、下に隙間を作らず人物を上へ寄せる */
+    transform: scale(1.4);
+    transform-origin: 62% 100%;
   }
 }
 
@@ -1102,11 +1292,15 @@ body.nav-open .fixed-cta {
   }
 
   .hero-logo img {
-    width: min(14vw, 150px);
+    width: min(10vw, 108px);
   }
 
   h1 {
     font-size: clamp(42px, 5.4vw, 60px);
+  }
+
+  .hero-title-line--message {
+    font-size: 0.56em;
   }
 
   .hero-lead {
@@ -1125,6 +1319,10 @@ body.nav-open .fixed-cta {
 
   .hero-prices {
     grid-template-columns: repeat(2, 230px);
+  }
+
+  .hero-actions--visit .button-primary {
+    min-width: 250px;
   }
 
   .interior-section .section-heading {
