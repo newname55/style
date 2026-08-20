@@ -2,3 +2,9 @@
 .env
 recruit-dev/screenshots/
 recruit-dev/assets/heroine/hero.png
+
+# Claude Code local files
+.claude/
+
+# Playwright CLI runtime files
+.playwright-cli/
