@@ -1,6 +1,5 @@
 <?php
-// セクキャバ求人LP（開発中）
-// 現在は 01_hero 〜 09_line-cta のみ実装。10 以降は未実装。
+// セクキャバ求人LP（01_hero〜09_line-ctaで完結）
 $asset_ver = '20260809-11';
 $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント（@pdz2759q）
 ?>
@@ -9,9 +8,9 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>セクキャバって、何するの？｜STYLE（スタイル）求人 やさしく解説</title>
-<meta name="description" content="「セクキャバって何するの？」ちょっと気になる、でもちょっと不安。STYLE（スタイル）のお仕事をやさしく解説します。未経験OK・体験入店OK・送迎あり・日払いOK。">
-<meta name="robots" content="noindex, nofollow">
+<title>セクキャバってどんなところ？｜STYLE（スタイル）求人 やさしく解説</title>
+<meta name="description" content="セクキャバが初めての方へ。STYLE（スタイル）のお店の雰囲気、働き方、接客の流れをやさしく解説します。仕事内容を聞くだけでも大丈夫です。">
+<meta name="robots" content="index, follow">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#fff5f8">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4N6NQSVRD"></script>
@@ -29,7 +28,7 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
   <a class="lp-header-logo" href="../recruit.html" aria-label="STYLE求人ページへ戻る">
     <img src="../assets/images/logo.webp" alt="STYLE（スタイル）求人" width="72" height="72">
   </a>
-  <p class="lp-header-label">STYLE 求人専用ページ</p>
+  <p class="lp-header-label">STYLEのお仕事を知るページ</p>
 </header>
 
 <main id="main">
@@ -54,16 +53,16 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
     <div class="hero__inner">
 
       <!-- 1. 小さなキャッチ -->
-      <p class="hero__catch"><span>初めてでも大丈夫</span></p>
+      <p class="hero__catch"><span>STYLEってどんなお店？</span></p>
 
       <!-- 2. メインタイトル -->
       <h1 class="hero__title" id="hero-title">
         <span class="hero__title-line hero__title-line--pink">セクキャバって、</span>
-        <span class="hero__title-line">何するの？</span>
+        <span class="hero__title-line">どんなところ？</span>
       </h1>
 
       <!-- 3. サブコピー -->
-      <p class="hero__sub">ちょっと気になる。<br class="u-br-sp">でも、ちょっと不安。</p>
+      <p class="hero__sub">STYLEのお店の雰囲気や働き方を、<br class="u-br-sp">初めての方にもやさしくご案内します。</p>
 
       <!-- 4. キャラクター ＋ 補足リボン -->
       <figure class="hero__figure">
@@ -75,7 +74,7 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
           width="900" height="1350"
           decoding="async"
           fetchpriority="high">
-        <figcaption class="hero__ribbon">はじめてのセクキャバをやさしく解説<span class="u-heart" aria-hidden="true">♡</span></figcaption>
+        <figcaption class="hero__ribbon">STYLEで働く前に知りたいことをやさしく解説<span class="u-heart" aria-hidden="true">♡</span></figcaption>
       </figure>
 
       <!-- 5. 安心ポイント -->
@@ -89,7 +88,7 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
       <!-- 6. LINE CTA -->
       <div class="hero__cta">
         <p class="hero__cta-lead">まずは気軽に聞いてみてください<span class="u-heart" aria-hidden="true">♡</span></p>
-        <a class="btn-line" href="<?php echo htmlspecialchars($line_url, ENT_QUOTES, 'UTF-8'); ?>">
+        <a class="btn-line" href="<?php echo htmlspecialchars($line_url, ENT_QUOTES, 'UTF-8'); ?>" data-ga-event="recruit_line_click" data-ga-location="hero_line">
           <span class="btn-line__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 3C6.9 3 2.8 6.4 2.8 10.6c0 3.8 3.3 6.9 7.7 7.5.3.06.7.2.8.46.1.24.07.6.03.85l-.13.8c-.04.24-.19.93.81.51 1-.42 5.4-3.2 7.37-5.47 1.36-1.5 2.01-3 2.01-4.65C21.4 6.4 17.3 3 12 3Z"/></svg>
           </span>
@@ -118,27 +117,27 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
       <!-- 2. 見出し -->
       <h2 class="what-is__title" id="what-is-title">
         <span class="what-is__title-heart" aria-hidden="true">♡</span>
-        セクキャバとは？
+        セクキャバってどんなところ？
         <span class="what-is__title-heart" aria-hidden="true">♡</span>
       </h2>
 
       <p class="what-is__lead">
-        セクキャバは、お酒を作ったりお客様との会話を楽しんだりする、キャバクラに近いお仕事です。
+        STYLEでは、お酒を作ったりお客様との会話を楽しんだりしながら、店内で楽しい時間をつくるお仕事です。接客の流れやお店のルールは、はじめに分かりやすくご案内します。
       </p>
 
       <!-- 3. 説明カード -->
       <ul class="what-is__cards">
         <li class="what-is__card">
           <span class="what-is__card-icon" aria-hidden="true">♡</span>
-          <p class="what-is__card-text">キャバクラに近いお仕事</p>
+          <p class="what-is__card-text">お酒と会話を楽しむお仕事</p>
         </li>
         <li class="what-is__card">
           <span class="what-is__card-icon" aria-hidden="true">♡</span>
-          <p class="what-is__card-text">普通のキャバクラより<br class="u-br-sp">距離が近い接客</p>
+          <p class="what-is__card-text">お客様との距離が近い接客</p>
         </li>
         <li class="what-is__card">
           <span class="what-is__card-icon" aria-hidden="true">♡</span>
-          <p class="what-is__card-text">お店ごとにルールあり</p>
+          <p class="what-is__card-text">STYLEのルールを確認してから</p>
         </li>
       </ul>
 
@@ -152,7 +151,7 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
           loading="lazy"
           decoding="async">
         <div class="what-is__note-bubble">
-          <p class="what-is__note-text">お仕事の流れは、はじめての方にも分かりやすくお伝えします。</p>
+          <p class="what-is__note-text">働く前に、仕事内容とお店の雰囲気を確認できます。</p>
           <p class="what-is__note-sub">分からないことや不安なことは、LINEでいつでも聞けます<span class="u-heart" aria-hidden="true">♡</span></p>
         </div>
       </div>
@@ -225,38 +224,38 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
     <div class="health__inner">
 
       <!-- 1. 小さなラベル -->
-      <p class="hero__catch health__label"><span>ここが気になる</span></p>
+      <p class="hero__catch health__label"><span>STYLEで安心して働くために</span></p>
 
       <!-- 2. 見出し -->
-      <h2 class="health__title" id="health-title">ヘルスとは違うの？</h2>
+      <h2 class="health__title" id="health-title">STYLEは店舗内での接客です</h2>
 
       <p class="health__lead">
-        セクキャバという名前だけを見ると、少し不安になるかもしれません。<br class="u-br-sp">
-        でも当店のお仕事は、デリバリーヘルスやファッションヘルスとは異なります。
+        初めて聞くお仕事だからこそ、不安なことがあって当然です。<br class="u-br-sp">
+        STYLEでは、勤務する店内で接客の流れやルールを確認できます。
       </p>
       <p class="health__body">
-        お客様の自宅やホテルへ行くお仕事ではなく、勤務は店舗内です。<br class="u-br-sp">
-        店内にはスタッフがいるので、分からないことや困ったことがあればすぐに相談できます。
+        勤務はSTYLEの店内で行います。<br class="u-br-sp">
+        店内にはスタッフがいるので、分からないことや困ったこともすぐに相談できます。
       </p>
 
       <!-- 3. 安心カード -->
       <ul class="health__cards">
         <li class="health__card">
           <span class="health__card-icon" aria-hidden="true"></span>
-          <p class="health__card-text">ホテルや自宅へ<br class="u-br-sp">行く仕事ではありません</p>
+          <p class="health__card-text">勤務はSTYLEの店内です</p>
         </li>
         <li class="health__card">
           <span class="health__card-icon" aria-hidden="true"></span>
-          <p class="health__card-text">勤務は店舗内です</p>
+          <p class="health__card-text">接客の流れを最初に確認</p>
         </li>
         <li class="health__card">
           <span class="health__card-icon" aria-hidden="true"></span>
-          <p class="health__card-text">店内にはスタッフがいます</p>
+          <p class="health__card-text">困ったときはスタッフに相談</p>
         </li>
       </ul>
 
       <!-- 4. やさしい説明文 -->
-      <p class="health__summary">基本はお酒・会話・距離の近い接客です</p>
+      <p class="health__summary">お酒・会話・距離の近い接客を、STYLEの店内で</p>
 
       <!-- 5. 安心メッセージ -->
       <div class="health__note">
@@ -534,7 +533,7 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
 
       <!-- 6. LINE CTA -->
       <div class="cta__button-wrap">
-        <a class="btn-line" href="<?php echo htmlspecialchars($line_url, ENT_QUOTES, 'UTF-8'); ?>">
+        <a class="btn-line" href="<?php echo htmlspecialchars($line_url, ENT_QUOTES, 'UTF-8'); ?>" data-ga-event="recruit_line_click" data-ga-location="final_line">
           <span class="btn-line__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 3C6.9 3 2.8 6.4 2.8 10.6c0 3.8 3.3 6.9 7.7 7.5.3.06.7.2.8.46.1.24.07.6.03.85l-.13.8c-.04.24-.19.93.81.51 1-.42 5.4-3.2 7.37-5.47 1.36-1.5 2.01-3 2.01-4.65C21.4 6.4 17.3 3 12 3Z"/></svg>
           </span>
@@ -588,6 +587,18 @@ $line_url  = 'https://line.me/R/ti/p/%40pdz2759q'; // LINE公式アカウント�
     <a href="../recruit.html">STYLE求人ページへ</a>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a[data-ga-event]');
+    if (!link || typeof gtag !== 'function') return;
+    gtag('event', link.dataset.gaEvent, {
+      page_type: 'recruit_dev',
+      link_location: link.dataset.gaLocation,
+      link_text: link.textContent.trim()
+    });
+  });
+</script>
 
 </body>
 </html>
