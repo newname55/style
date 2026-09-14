@@ -139,7 +139,7 @@ a {
   transform: translateY(-14px);
   opacity: 0;
   pointer-events: none;
-  background: rgba(39, 11, 24, 0.98);
+  background: rgb(39, 11, 24);
   border-bottom: 1px solid var(--line);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -472,6 +472,18 @@ h2 {
 .event-card img {
   width: 100%;
   height: auto;
+}
+
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(2, min(100%, 380px));
+  justify-content: center;
+  gap: 24px;
+}
+
+.event-cards .event-card {
+  width: 100%;
+  margin: 0;
 }
 
 .system-section {
@@ -1215,6 +1227,10 @@ body.nav-open .fixed-cta {
   .event-card {
     width: min(100%, 330px);
     border-radius: 20px;
+  }
+
+  .event-cards {
+    grid-template-columns: min(100%, 330px);
   }
 
   .interior-photo img {
