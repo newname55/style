@@ -22,6 +22,8 @@ rsync -avz --delete \
   --exclude ".gitignore" \
   --exclude ".DS_Store" \
   --exclude "scripts/" \
+  --exclude "docs/" \
+  --exclude ".playwright-cli/" \
   --exclude ".env" \
   --exclude ".htaccess" \
   --exclude ".user.ini" \
