@@ -44,3 +44,13 @@ bash scripts/deploy.sh
 - `rsync -avz --delete` を使用するため、ローカルに存在しないファイルは本番から削除される
 - `.git` / `.DS_Store` / `scripts` / `.env` は転送対象外
 - 本番 public_html を直接編集しない。変更は必ず git にコミットしてから deploy.sh で反映する
+
+対象ファイルだけを公開する場合は、コミット後にリポジトリ相対パスを指定する。
+この方法では指定外のファイルを転送・削除しない。
+
+```bash
+bash scripts/deploy.sh index.html assets/images/style-business-days-2026-09.webp
+```
+
+指定可能な対象は `index.html`、`recruit.html`、`assets/` 配下のGit管理済みファイル。
+本番との内容差を確認してから実行する。
